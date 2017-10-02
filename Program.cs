@@ -6,7 +6,9 @@ namespace Shapes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            App shapes = new App();
+
+            shapes.Run();            
         }
     }
 }
