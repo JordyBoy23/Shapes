@@ -3,6 +3,8 @@ using System;
 namespace Shapes{
     class App
     {
+        Triangle triangle1 = new Triangle();
+
         public App()
         {
             
@@ -10,7 +12,14 @@ namespace Shapes{
 
         public void Run()
         {
-            Console.WriteLine("Hello World! I'm App");
+            Console.Write("Enter the height of the triangle: ");
+            triangle1.Height = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the base length of the triangle: ");
+            triangle1.BaseLength = Convert.ToDouble(Console.ReadLine());
+
+
+            Console.Write("The area of the triangle is: {0}", triangle1.GetArea()); 
         }
     }
 }

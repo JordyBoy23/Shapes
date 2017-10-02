@@ -7,8 +7,8 @@ namespace Shapes
         static void Main(string[] args)
         {
             App shapes = new App();
-
-            shapes.Run();            
+            
+            shapes.Run();
         }
     }
 }
