@@ -8,7 +8,8 @@ namespace Shapes
         {
             App shapes = new App();
             
-            shapes.Run();
+            shapes.RunTriangle();
+            shapes.RunRectangle();
         }
     }
 }

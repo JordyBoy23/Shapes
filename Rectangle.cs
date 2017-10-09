@@ -2,57 +2,57 @@ using System;
 
 namespace Shapes
 {
-    class Triangle
+    class Rectangle
     {
-        private double height;
-        private double baseLength;
+        private double width;
+        private double length;
 
-        public Triangle(double height, double baseLength)
+        public Rectangle(double width, double length)
         {
-            this.height = height;
-            this.baseLength = baseLength;
+            this.width = width;
+            this.length = length;
         }
 
-        public double Height 
+        public double Width
         {
             get
             {
-                return height;
-            } 
+                return width;
+            }
             set
             {
                 if(value < 1 || value > double.MaxValue)
                 {
                     throw new OverflowException();
                 }
-                height = value;
+                width = value;
             }
         }
-        
-        public double BaseLength 
+
+        public double Length
         {
             get
             {
-                return baseLength;
-            } 
+                return length;
+            }
             set
             {
                 if(value < 1 || value > double.MaxValue)
                 {
                     throw new OverflowException();
                 }
-                baseLength = value;
+                length = value;
             }
         }
 
         public double GetArea()
         {
-            return (height * baseLength) * 0.5;
+            return width * length;
         }
-
+        
         public double GetPerimeter()
         {
-            return baseLength + (Math.Sqrt((baseLength*baseLength) + (4 * (height * height))));
+            return 2 * (length+width);
         }
     }
 }
